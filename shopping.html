@@ -74,6 +74,10 @@
             <button onclick="filterCategory('souvenir', this)" class="tab-btn whitespace-nowrap px-6 py-3 rounded-full border border-gray-200 bg-white text-gray-700 font-semibold text-sm hover:bg-rose-50 focus:outline-none flex items-center">
                 <span class="mr-2 text-lg">🎁</span> 特色伴手禮
             </button>
+            <!-- 新增的「韓國必買」按鈕 -->
+            <button onclick="filterCategory('mustbuy', this)" class="tab-btn whitespace-nowrap px-6 py-3 rounded-full border border-gray-200 bg-white text-gray-700 font-semibold text-sm hover:bg-rose-50 focus:outline-none flex items-center">
+                <span class="mr-2 text-lg">🌟</span> 韓國必買
+            </button>
             <button onclick="filterCategory('mart', this)" class="tab-btn whitespace-nowrap px-6 py-3 rounded-full border border-gray-200 bg-white text-gray-700 font-semibold text-sm hover:bg-rose-50 focus:outline-none flex items-center">
                 <span class="mr-2 text-lg">🛒</span> 零食超市
             </button>
@@ -96,8 +100,31 @@
     </footer>
 
     <script>
-        // 店家資料庫 - 首爾品牌與商品推薦版
+        // 店家資料庫 - 支援單一分類字串或陣列分類
         const shopData = [
+            // --- 韓國必買 新增品項 (同時歸類於 mustbuy 及各自對應的分類) ---
+            
+            // 甜點/伴手禮
+            { cat: ['mustbuy', 'souvenir'], name: 'BRICKSAND 費南雪 (首爾站店)', feature: '外觀做成積木和磚塊造型，精緻可愛，絕對是鏡頭下的焦點。口味多達 15 種，非常適合在旅程最後一天順手帶幾盒。', loc: '서울 용산구 한강대로 405 (首爾站 1樓大廳)', transit: '地鐵1/4號線/機場快線「首爾站」1樓大廳內' },
+            { cat: ['mustbuy', 'souvenir'], name: 'GOLDEN PIECE 精品藥果', feature: '將韓國傳統點心「藥果」結合黑芝麻、伯爵茶等創新口味，外觀裝飾得像藝術品一樣，搭配華麗質感的鐵盒包裝，送禮絕佳選擇。', loc: '서울 용산구 한남대로27길 25 (漢南洞旗艦店)', transit: '地鐵6號線「漢江鎮站」3號出口，步行約5分鐘' },
+            { cat: ['mustbuy', 'souvenir'], name: 'Milky Shop 焦糖奶油餅乾', feature: '主打美式復古風格。酥脆餅乾夾著濃郁焦糖奶油，雖然保存期限較短（常溫 3 天），但美味程度絕對值得為它留一點行李空間。', loc: '서울 성동구 (聖水洞為其熱門分店之一)', transit: '地鐵2號線「聖水站」周邊' },
+            { cat: ['mustbuy', 'souvenir'], name: 'BUTTER 雜貨店 (弘大店)', feature: '喜歡設計感強的生活小物或文具，這家店絕對讓你逛到不想出來，經常推出超級可愛的聯名款。', loc: '서울 마포구 양화로 153 (弘大AK&百貨 B1)', transit: '地鐵2號線「弘大入口站」4號出口連通道直達' },
+            
+            // 零食/超市
+            { cat: ['mustbuy', 'mart'], name: '扁可頌 크룽지 (超商包裝版)', feature: '近期在韓國大爆紅的甜點！將可頌壓扁煎烤到極致酥脆。推薦購買超商販售的包裝版 (如 GINI F&S 品牌)，方便帶回台灣。', loc: '全韓國各大 GS25、CU 便利商店', transit: '隨處可見，各大街邊或飯店樓下便利商店即可購買' },
+            { cat: ['mustbuy', 'mart'], name: 'Delight Project 貝果餅乾', feature: 'Olive Young 長年熱銷冠軍！將貝果切片低溫烘烤，口感酥脆且熱量低。大推「大蒜牛油」和近期黑馬「玉米濃湯」口味。', loc: '全韓國各大 Olive Young 門市', transit: '明洞、弘大等各大商圈的 Olive Young 皆有販售' },
+            { cat: ['mustbuy', 'mart'], name: 'HBAF 杏仁果 (明洞旗艦店)', feature: '明洞有超大型的旗艦店。口味多達數十種（推薦蜂蜜奶油、大蒜麵包、芥末），有推出小包裝的綜合組，發給親友最方便。', loc: '서울 중구 명동길 74 (明洞旗艦店)', transit: '地鐵4號線「明洞站」步行約5分鐘' },
+            { cat: ['mustbuy', 'mart'], name: 'LOTTE ZERO 系列零食', feature: '主打無糖、低卡（使用麥芽糖醇代替精製糖），這系列的「Zero 巧克力派」和「水果軟糖」非常好吃，對飲食控制的人來說比較沒有負擔。', loc: '各大樂天超市 (Lotte Mart)、E-mart', transit: '首爾站樂天超市 (首爾站1號出口旁) 款式最為齊全' },
+            
+            // 美妝保養
+            { cat: ['mustbuy', 'beauty'], name: 'fwee 唇頰兩用布丁膏', feature: '近期的「現象級」彩妝，軟糯的布丁質地抹開會變成高級的柔霧感，圓潤的玻璃包裝非常有質感，很多人都是直接包色。', loc: 'fwee Agit 聖水旗艦店 / 各大 Olive Young', transit: '旗艦店：地鐵2號線「聖水站」4號出口，步行約5分鐘' },
+            { cat: ['mustbuy', 'beauty'], name: 'VT Reedle Shot 微針精華', feature: '韓國女生保養水煮蛋肌的秘密武器，透過微針技術幫助保養品吸收，經常被掃到缺貨。', loc: '全韓國 Olive Young 或 Daiso 大創', transit: '大創有售平價小包裝版，Olive Young 有全系列濃度' },
+            { cat: ['mustbuy', 'beauty'], name: 'Torriden 玻尿酸保濕面膜', feature: '長年霸榜的補水神器，價格親民，敷完隔天臉部透亮感很明顯，推薦多囤幾盒。', loc: '全韓國各大 Olive Young 門市', transit: '各大商圈 Olive Young 皆可購買，常有特價活動' },
+
+            // 流行服飾
+            { cat: ['mustbuy', 'fashion'], name: '韓國本土潮牌 (COVERNAT / emis)', feature: '韓國潮流必備！在明洞、聖水洞或漢南洞都很好逛，品牌 Logo 的帽子和帆布包是極好入手的單品。', loc: 'COVERNAT 弘大旗艦店 / emis 漢南洞旗艦店', transit: 'COVERNAT：弘大入口站9號出口 / emis：漢江鎮站3號出口' },
+
+            // --- 原有資料庫 ---
             // --- 流行服飾 ---
             { cat: 'fashion', name: 'MUSINSA STANDARD (弘大店)', feature: '韓國最大的線上潮牌實體旗艦店，被譽為「韓國版UNIQLO」，以極簡百搭的高質感單品與西裝外套聞名。', loc: '서울 마포구 양화로 144 (首爾麻浦區楊花路144)', transit: '地鐵2號線「弘大入口站 (홍대입구역)」9號出口，步行約2分鐘' },
             { cat: 'fashion', name: 'Mardi Mercredi (漢南旗艦店)', feature: '韓國爆紅設計師品牌，經典小雛菊印花T恤與大學T是時下韓妞必備，漢南洞旗艦店款式最齊全。', loc: '서울 용산구 이태원로54길 58 (首爾龍山區梨泰院路54街58)', transit: '地鐵6號線「漢江鎮站 (한강진역)」3號出口，步行約8分鐘' },
@@ -139,17 +166,20 @@
             const container = document.getElementById('shop-container');
             container.innerHTML = ''; // 清空現有內容
 
-            const filteredData = shopData.filter(item => item.cat === category);
+            // 修改篩選邏輯以支援陣列格式 (商品可以同時屬於多個分類)
+            const filteredData = shopData.filter(item => {
+                const itemCats = Array.isArray(item.cat) ? item.cat : [item.cat];
+                return itemCats.includes(category);
+            });
 
             filteredData.forEach((shop, index) => {
                 const delay = index * 50; // 簡單的進場動畫延遲
                 
-                // 1. 產生 Google Map 搜尋網址 (改為 Seoul 以提高精準度)
+                // 1. 產生 Google Map 搜尋網址
                 const mapSearchQuery = encodeURIComponent(`${shop.name} Seoul`);
                 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mapSearchQuery}`;
 
                 // 2. 產生 Naver Map 導航網址
-                // 為了提高 Naver Map 搜尋精準度，自動過濾掉括號內的中文說明（例如把 "MUSINSA STANDARD (弘大店)" 變成 "MUSINSA STANDARD"）
                 const pureName = shop.name.split('(')[0].trim();
                 const naverSearchQuery = encodeURIComponent(pureName);
                 const naverMapsUrl = `https://map.naver.com/v5/search/${naverSearchQuery}`;
@@ -174,14 +204,14 @@
                             <div class="flex items-start">
                                 <i class="fa-solid fa-location-dot text-rose-400 mt-1 mr-3 w-4 text-center"></i>
                                 <div>
-                                    <p class="text-xs text-gray-400 font-semibold mb-1">詳細地址</p>
+                                    <p class="text-xs text-gray-400 font-semibold mb-1">詳細地址/購買地</p>
                                     <p class="text-sm text-gray-700 font-medium">${shop.loc}</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
                                 <i class="fa-solid fa-train-subway text-rose-500 mt-1 mr-3 w-4 text-center"></i>
                                 <div>
-                                    <p class="text-xs text-gray-400 font-semibold mb-1">自助交通方式</p>
+                                    <p class="text-xs text-gray-400 font-semibold mb-1">交通方式</p>
                                     <span class="inline-block bg-rose-50 text-rose-700 text-xs px-2 py-1 rounded-md font-medium text-left leading-normal">${shop.transit}</span>
                                 </div>
                             </div>
