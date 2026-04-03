@@ -42,7 +42,7 @@
                 <h1 class="text-2xl font-extrabold tracking-tight mt-0.5 drop-shadow-sm">首爾通 Seoul</h1>
             </div>
             <div class="flex gap-2">
-                <!-- 語言切換按鈕 -->
+                <!-- 語言切換按鈕：連結至美版連結 -->
                 <a href="https://linkuei0425.github.io/Seoul-US/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-black/20 rounded-full flex items-center justify-center backdrop-blur-sm active:scale-90 transition-transform text-sm font-bold border border-white/10">EN</a>
             </div>
         </div>
@@ -71,19 +71,21 @@
     <div class="px-5 mt-4">
         <h2 class="text-sm font-bold text-gray-500 mb-4 px-1">快速導航工具</h2>
         <div class="grid grid-cols-4 gap-y-6 gap-x-3">
+            <!-- 旅遊必備 (移至第一位並改為外連) -->
+            <button onclick="window.open('https://linkuei0425.github.io/togeter/buy.html', '_blank')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-violet-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(139,92,246,0.2)]"><i class="ph ph-suitcase text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">旅遊必備</span></button>
+
             <button onclick="window.openModal('airportModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-rose-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(244,63,94,0.2)]"><i class="ph ph-airplane-tilt text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">機場攻略</span></button>
             <button onclick="window.openModal('mapModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-blue-600 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(37,99,235,0.2)]"><i class="ph ph-train text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">地鐵路線</span></button>
             <button onclick="window.openModal('boatModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-indigo-600 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(79,70,229,0.2)]"><i class="ph ph-train-regional text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">跨區交通</span></button>
             
-            <!-- 機票查詢按鈕 -->
-            <a href="https://tw.trip.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-sky-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(14,165,233,0.2)]"><i class="ph ph-ticket text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">機票查詢</span></a>
+            <!-- 機票查詢按鈕：加入分潤代碼 -->
+            <a href="https://tw.trip.com/?Allianceid=299526438" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-sky-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(14,165,233,0.2)]"><i class="ph ph-ticket text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">機票查詢</span></a>
 
             <button onclick="window.openModal('attractionModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-pink-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(236,72,153,0.2)]"><i class="ph ph-camera text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">景點探索</span></button>
             
             <a href="https://linkuei0425.github.io/Seoul/food.html" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-orange-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(249,115,22,0.2)]"><i class="ph ph-bowl-food text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">美食推薦</span></a>
             <a href="https://linkuei0425.github.io/Seoul/shopping.html" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-purple-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(168,85,247,0.2)]"><i class="ph ph-shopping-bag text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">購物推薦</span></a>
             
-            <!-- 新增醫美推薦按鈕 -->
             <button onclick="window.openModal('clinicModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-fuchsia-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(217,70,239,0.2)]"><i class="ph ph-sparkle text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">醫美推薦</span></button>
             
             <a href="https://linkuei0425.github.io/Seoul/S.html" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-teal-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(20,184,166,0.2)]"><i class="ph ph-calendar-check text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">行程表</span></a>
@@ -92,11 +94,8 @@
             <a href="https://linkuei0425.github.io/Seoul/hotel.html" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-cyan-600 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(8,145,178,0.2)]"><i class="ph ph-bed text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">飯店推薦</span></a>
             <a href="https://linkuei0425.github.io/togeter/go.html" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-amber-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(245,158,11,0.2)]"><i class="ph ph-globe text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">全球通</span></a>
             
-            <button onclick="window.openModal('essentialsModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-red-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(239,68,68,0.2)]"><i class="ph ph-suitcase text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">旅遊必備</span></button>
-            
             <button onclick="window.openModal('aboutModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-600 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(71,85,105,0.2)]"><i class="ph ph-info text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">關於我們</span></button>
             
-            <!-- 加入粉絲 -->
             <button onclick="window.openModal('fanModal')" class="flex flex-col items-center gap-2 group"><div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-red-500 group-active:scale-90 transition-transform shadow-[0_4px_10px_rgba(239,68,68,0.2)]"><i class="ph ph-heart text-3xl"></i></div><span class="text-[11px] font-bold text-gray-700">加入粉絲</span></button>
         </div>
     </div>
@@ -171,7 +170,7 @@
     <!-- 地鐵路線規劃 (Seoul Metro) -->
     <div id="mapModal" class="fixed inset-0 bg-gray-900 z-[80] hidden opacity-0 transition-opacity duration-300 flex flex-col max-w-[414px] mx-auto">
         <div class="pt-10 pb-6 px-5 flex justify-between items-center border-b border-gray-800 shadow-md">
-            <div class="flex items-center gap-2"><i class="ph-fill ph-train text-2xl text-blue-500"></i><div><h2 class="text-white font-bold text-lg leading-tight">首爾地鐵路線規劃</h2><p class="text-[10px] text-gray-400">熱門旅遊車站 (僅列最受旅客歡迎且核心的站點)</p></div></div>
+            <div class="flex items-center gap-2"><i class="ph-fill ph-train text-2xl text-blue-500"></i><div><h2 class="text-white font-bold text-lg leading-tight">首爾地鐵路線規劃(僅列觀光站點 )</h2><p class="text-[10px] text-gray-400">熱門旅遊車站 (僅列最受旅客歡迎且核心的站點)</p></div></div>
             <button onclick="window.closeModal('mapModal')" class="text-white bg-white/10 p-1.5 rounded-full"><i class="ph ph-x text-xl"></i></button>
         </div>
         <div class="p-5 flex-1 overflow-y-auto bg-gray-900 no-scrollbar text-white">
@@ -468,77 +467,46 @@ subwayDataLocal.forEach(line => line.items.forEach(i => {
 
 const buildSubwayGraph = () => {
     const edges = [];
-    
-    // 計算實際站數差距的輔助函數
     const getDist = (u, v, line) => {
         if (line === "站內轉乘") return 0;
-        
-        // 處理環狀線與特殊代碼的邊界條件
         const pair = [u, v].sort().join('-');
-        if (pair === "[201]-[241]") return 3; // 241 -> 242 -> 243 -> 201
-        if (pair === "[222]-[239]") return 17; // 239 - 222 = 17 站
-        
-        // 解決 AREX A042 麻谷渡口字串排序與數值相減的錯誤
+        if (pair === "[201]-[241]") return 3; 
+        if (pair === "[222]-[239]") return 17; 
         if ((u === "[A04]" && v === "[A042]") || (u === "[A042]" && v === "[A04]")) return 1;
         if ((u === "[A042]" && v === "[A05]") || (u === "[A05]" && v === "[A042]")) return 1;
-
-        // 一般數字相減處理：取出數字並計算絕對值差，得出真實站距
         const numU = parseInt(u.replace(/[^0-9]/g, ''));
         const numV = parseInt(v.replace(/[^0-9]/g, ''));
         return Math.abs(numU - numV);
     };
-
     const addEdge = (u, v, line, type) => {
         let stops = type === 'transfer' ? 0 : getDist(u, v, line);
         edges.push({ u: u, v: v, line: line, type: type, stops: stops });
         edges.push({ u: v, v: u, line: line, type: type, stops: stops });
     };
-    
-    // AREX connections
     const arex = ["[A13]", "[A12]", "[A11]", "[A10]", "[A09]", "[A08]", "[A07]", "[A06]", "[A05]", "[A042]", "[A04]", "[A03]", "[A02]", "[A01]"];
     for(let i=0; i<arex.length-1; i++) addEdge(arex[i], arex[i+1], "AREX", 'travel');
-    
-    // Line 2 connections (Circular)
     const l2 = ["[239]", "[241]", "[201]", "[202]", "[204]", "[208]", "[211]", "[212]", "[216]", "[220]", "[222]"];
     for(let i=0; i<l2.length-1; i++) addEdge(l2[i], l2[i+1], "2號線", 'travel');
     addEdge("[222]", "[239]", "2號線", 'travel');
-    
-    // Line 3 connections
     const l3 = ["[327]", "[328]", "[329]", "[336]", "[337]", "[339]"];
     for(let i=0; i<l3.length-1; i++) addEdge(l3[i], l3[i+1], "3號線", 'travel');
-    
-    // Line 4 connections
     const l4 = ["[420]", "[421]", "[424]", "[425]", "[426]"];
     for(let i=0; i<l4.length-1; i++) addEdge(l4[i], l4[i+1], "4號線", 'travel');
-
-    // Line 6 connections
     const l6 = ["[630]", "[631]"];
     for(let i=0; i<l6.length-1; i++) addEdge(l6[i], l6[i+1], "6號線", 'travel');
-    
-    // Hardcoded Virtual Transfers (To connect the independent lines logically)
     const transfers = [
-        {a: "[239]", b: "[A03]"}, // Hongdae (L2 <-> AREX)
-        {a: "[426]", b: "[A01]"}, // Seoul Station (L4 <-> AREX)
-        {a: "[204]", b: "[421]"}, // DDP <-> Dongdaemun
-        {a: "[201]", b: "[533]"}, // City Hall <-> Gwanghwamun
-        {a: "[202]", b: "[424]"}, // Euljiro 1-ga <-> Myeongdong
-        {a: "[329]", b: "[424]"}, // Jongno 3-ga <-> Myeongdong
-        {a: "[329]", b: "[202]"}, // Jongno 3-ga <-> Euljiro 1-ga
-        {a: "[527]", b: "[A02]"}, // Yeouinaru <-> Gongdeok
-        {a: "[630]", b: "[424]"}, // Itaewon <-> Myeongdong
-        {a: "[929]", b: "[339]"}, // Bongeunsa <-> Express Bus Terminal
-        {a: "[339]", b: "[222]"}, // Express Bus Terminal <-> Gangnam
-        {a: "[929]", b: "[216]"}  // Bongeunsa <-> Jamsil
+        {a: "[239]", b: "[A03]"}, {a: "[426]", b: "[A01]"}, {a: "[204]", b: "[421]"}, 
+        {a: "[201]", b: "[533]"}, {a: "[202]", b: "[424]"}, {a: "[329]", b: "[424]"}, 
+        {a: "[329]", b: "[202]"}, {a: "[527]", b: "[A02]"}, {a: "[630]", b: "[424]"}, 
+        {a: "[929]", b: "[339]"}, {a: "[339]", b: "[222]"}, {a: "[929]", b: "[216]"}
     ];
     transfers.forEach(t => addEdge(t.a, t.b, "站內轉乘", 'transfer'));
-
     const graph = {};
     edges.forEach(e => { if(!graph[e.u]) graph[e.u]=[]; graph[e.u].push({node:e.v, line:e.line, type:e.type, stops:e.stops}); });
     return graph;
 };
 
 const mrtGraphLocal = buildSubwayGraph();
-
 const bfsEdgeTrack = (g, s, e) => {
     if (s === e) return { path: [s], edges: [] };
     let q = [{ node: s, path: [s], edges: [] }], v = new Set([s]);
@@ -559,13 +527,10 @@ window.calcMrt = () => {
         const o = document.getElementById('mrt-origin').value;
         const d = document.getElementById('mrt-dest').value;
         if (!o || !d) { window.showToast('請選擇出發站與目的站'); return; }
-        
         const result = bfsEdgeTrack(mrtGraphLocal, o, d);
         if (!result) { window.showToast('抱歉，此簡化版路線圖無法連接這兩站'); return; }
-
         const res = document.getElementById('mrt-result'); 
         res.classList.remove('hidden');
-
         let segments = [];
         let currentSegment = null;
         result.edges.forEach((edge, i) => {
@@ -579,21 +544,17 @@ window.calcMrt = () => {
                     currentSegment = { line: edge.line, start: result.path[i], end: edge.node, stops: edge.stops };
                 } else {
                     currentSegment.end = edge.node; 
-                    currentSegment.stops += edge.stops; // 累加實際站數差距
+                    currentSegment.stops += edge.stops;
                 }
             }
         });
         if(currentSegment) segments.push(currentSegment);
-
         const totalStops = segments.reduce((s, seg) => s + (seg.stops || 0), 0);
         const cleanName = (code) => codeToNameLocal[code] || code;
-
         document.getElementById('mrt-stops-count').innerHTML = `<span class="text-2xl">${totalStops}</span><span class="text-sm ml-1 text-gray-400">站</span>`;
         document.getElementById('mrt-time').textContent = `約 ${totalStops * 2 + (segments.filter(s=>s.isTransfer).length * 5) + 2} 分`;
-        
         let html = `<div class="relative pl-6 border-l-2 border-gray-600 ml-3 space-y-5 mt-2 pb-2">`;
         html += `<div class="relative"><div class="absolute -left-[33px] top-1 bg-gray-900 border-[3px] border-blue-500 w-4 h-4 rounded-full z-10"></div><p class="text-[10px] text-gray-400 font-bold mb-0.5">起點</p><p class="text-base font-bold text-white leading-none">${cleanName(o)}</p></div>`;
-        
         segments.forEach(seg => {
             if(seg.isTransfer) {
                 if (cleanName(seg.node) === cleanName(d)) return;
@@ -605,20 +566,14 @@ window.calcMrt = () => {
                 else if (seg.line.includes('4號線')) lineCol = 'text-blue-400';
                 else if (seg.line.includes('6號線')) lineCol = 'text-amber-600';
                 else if (seg.line.includes('AREX')) lineCol = 'text-sky-300';
-
                 html += `<div class="relative py-1"><div class="bg-gray-800/80 rounded-xl p-3 border border-gray-700 shadow-sm inline-block min-w-[140px]"><div class="flex items-center gap-3"><i class="ph-fill ph-subway text-xl ${lineCol}"></i><div><p class="text-xs font-bold ${lineCol}">${seg.line}</p><p class="text-[10px] text-gray-400 mt-0.5">搭乘 <span class="text-white font-bold">${seg.stops}</span> 站</p></div></div></div></div>`;
             }
         });
-
         html += `<div class="relative"><div class="absolute -left-[33px] top-1 bg-gray-900 border-[3px] border-white w-4 h-4 rounded-full z-10"></div><p class="text-[10px] text-gray-400 font-bold mb-0.5">終點</p><p class="text-base font-bold text-white leading-none">${cleanName(d)}</p></div></div>`;
         document.getElementById('mrt-path-detail').innerHTML = html;
-        
-    } catch (error) {
-        window.showToast("路線計算發生錯誤");
-    }
+    } catch (error) { window.showToast("路線計算發生錯誤"); }
 };
 
-// --- Korea Intercity ---
 const cities = [
     { id: "seoul", name: "首爾 (Seoul)" },
     { id: "busan", name: "釜山 (Busan)" },
@@ -632,12 +587,9 @@ window.calcBoat = () => {
     const d = document.getElementById('boat-dest').value;
     if (!o || !d) { window.showToast('請選擇出發與目的城市'); return; }
     if (o === d) { window.showToast('出發與目的不能相同'); return; }
-
     const res = document.getElementById('boat-result');
     res.classList.remove('hidden');
-
     let time = "", type = "", detailHtml = "";
-
     if ((o === 'seoul' && d === 'busan') || (o === 'busan' && d === 'seoul')) {
         time = "約 2.5 小時"; type = "KTX / SRT 高鐵";
         detailHtml = `<p class="text-white">韓國南北大動脈</p><p class="text-xs text-indigo-300 mt-2">強烈建議搭乘 KTX (首爾站出發) 或 SRT (水西站出發)。若想省錢也可搭乘高速巴士 (約4小時)。</p>`;
@@ -654,13 +606,11 @@ window.calcBoat = () => {
         time = "依距離而定"; type = "高速巴士 / 國鐵";
         detailHtml = `<p class="text-white">韓國跨城移動</p><p class="text-xs text-indigo-300 mt-2">推薦下載「Naver Map」APP，可獲得最精準的跨城交通方案與轉乘建議。</p>`;
     }
-
     document.getElementById('boat-type').textContent = type;
     document.getElementById('boat-time').textContent = time;
     document.getElementById('boat-path-detail').innerHTML = detailHtml;
 };
 
-// --- Attractions Logic ---
 const attractionCategories = [
     {
         id: "history", icon: "ph-bank", name: "1. 經典歷史文化",
@@ -740,29 +690,21 @@ window.openAttrCategory = (idx) => {
     document.getElementById('attr-cat-grid').classList.add('hidden');
     document.getElementById('attr-detail-view').classList.remove('hidden');
     document.getElementById('current-cat-title').textContent = currentCat.name;
-    
     const select = document.getElementById('attraction-select');
     select.innerHTML = `<option value="" disabled selected>請選擇景點...</option>` + 
         currentCat.list.map((item, i) => `<option value="${i}">${item.name}</option>`).join('');
-    
     document.getElementById('attr-result').classList.add('hidden');
-    
     select.onchange = function() {
         const item = currentCat.list[this.value];
         document.getElementById('attr-name').textContent = item.name;
         document.getElementById('attr-desc').textContent = item.desc;
         document.getElementById('attr-transport').textContent = item.transport;
-        
-        // 處理動態按鈕顯示邏輯
         const actionWrapper = document.getElementById('attr-action-wrapper');
         if (item.actionUrl) {
             document.getElementById('attr-action-btn').href = item.actionUrl;
             document.getElementById('attr-action-text').textContent = item.actionText;
             actionWrapper.classList.remove('hidden');
-        } else {
-            actionWrapper.classList.add('hidden');
-        }
-        
+        } else { actionWrapper.classList.add('hidden'); }
         document.getElementById('attr-result').classList.remove('hidden');
     };
 };
@@ -772,7 +714,6 @@ window.resetAttrView = () => {
     document.getElementById('attr-detail-view').classList.add('hidden');
 };
 
-// --- Essentials Logic ---
 const essentialItems = [
     { name: "護照 (效期需滿6個月)", checked: true },
     { name: "T-money 交通卡 (必備)", checked: false },
@@ -792,7 +733,6 @@ const renderEssentials = () => {
     `).join('');
 };
 
-// --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
     const mo = document.getElementById('mrt-origin'), md = document.getElementById('mrt-dest');
     subwayDataLocal.forEach(g => { 
@@ -800,24 +740,18 @@ document.addEventListener('DOMContentLoaded', () => {
             let code = i.split(']')[0] + ']'; 
             return `<option value="${code}">${i}</option>`;
         }).join('')}</optgroup>`; 
-        mo.innerHTML += opt; 
-        md.innerHTML += opt; 
+        mo.innerHTML += opt; md.innerHTML += opt; 
     });
-    
     const bo = document.getElementById('boat-origin'), bd = document.getElementById('boat-dest');
     let cityOptions = cities.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
     bo.innerHTML += cityOptions; bd.innerHTML += cityOptions;
-
     setInterval(() => {
         const now = new Date();
         document.getElementById('datetime-display').textContent = now.toLocaleString('zh-TW', { timeZone: 'Asia/Seoul', hour12: false }) + " (韓國時間)";
     }, 1000);
-    
     setTimeout(() => { document.getElementById('weather-display').innerHTML = '<i class="ph-fill ph-cloud-sun text-yellow-400 text-sm"></i> 晴時多雲 18°C'; }, 1500);
-    
     const track = document.getElementById('carousel-track'); let slide = 0;
     setInterval(() => { slide = (slide + 1) % 3; track.style.transform = `translateX(-${slide * 93}%)`; }, 3500);
-
     renderAttrCategories();
     renderEssentials();
 });
